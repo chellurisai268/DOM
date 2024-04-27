@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <body>
+        <h1>change the button color</h1>
+        <button onclick="changeColor()"id="d1">green</button>
+        <script>
+            var ar=['green','white']
+            var i=0;
+            function changeColor(){
+               document.getElementById("d1").style.backgroundColor=ar[i]
+               i=(i+1)%ar.length
+            }
+        </script>
+    </body>
+</html>

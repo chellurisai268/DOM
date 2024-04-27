@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                text-align: center;
+                width: 200px;
+                height: 300px;
+                border: 2px solid;
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <div id="d2">
+           <button onclick="changeColor()" id="d4">0n</button>
+           <button onclick="change()" id="d5">off</button>  
+        </div>
+        <script>
+             
+        
+            function changeColor(){
+                document.getElementById("d1").style.backgroundColor="red"
+               document.getElementById("d4").style.backgroundColor="yellow"
+            
+               document.getElementById("d5").style.backgroundColor="white"
+
+            }
+          function change(){
+            document.getElementById("d1").style.backgroundColor="white"
+            document.getElementById("d5").style.backgroundColor="yellow"
+        
+            document.getElementById("d4").style.backgroundColor="white"
+           }
+         
+      
+
+        </script>
+    </body>
+</html>

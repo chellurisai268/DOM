@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <table id="d1" width="50%" border="2px solid" align="center">
+            <thead>
+                <th>firstame</th>
+                <th>lastname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>Salary</th>
+                
+            </thead>
+            <tbody id="d2"></tbody>
+        </table>
+
+        <script>
+          var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                    ]
+                    people.forEach(function(a){
+                     var ntr=document.createElement("tr")
+
+                     atd=document.createElement("td")
+                     atd.innerHTML=a.firstname;
+                     ntr.appendChild(atd)
+                     document.getElementById("d2").appendChild(ntr)
+
+                     btd=document.createElement("td")
+                     btd.innerHTML=a.lastname;
+                     ntr.appendChild(btd)
+                     document.getElementById("d2").appendChild(ntr)
+
+                     ctd=document.createElement("td")
+                     ctd.innerHTML=a.age;
+                     ntr.appendChild(ctd)
+                     document.getElementById("d2").appendChild(ntr)
+
+                     
+                     dtd=document.createElement("td")
+                     dtd.innerHTML=a.gender;
+                     ntr.appendChild(dtd)
+                     document.getElementById("d2").appendChild(ntr)
+
+                     
+                     etd=document.createElement("td")
+                     etd.innerHTML=a.city;
+                     ntr.appendChild(etd)
+                     document.getElementById("d2").appendChild(ntr)
+
+                     
+                     ftd=document.createElement("td")
+                     ftd.innerHTML=a.salary;;
+                     ntr.appendChild(ftd)
+                     document.getElementById("d2").appendChild(ntr)
+
+
+
+
+                   
+                    })
+                
+                
+
+        </script>
+    </body>
+</html>

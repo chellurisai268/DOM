@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #d1 {
+            width: 80%;
+            height: 600px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <img onclick="abc()" src="https://t4.ftcdn.net/jpg/00/83/95/55/240_F_83955554_GJkpFVDvAhZ0A4TYjjZYU2zq5fflL3dS.jpg" id="d1">
+     
+    </div>
+
+    <script>
+        var images = [
+            'https://t4.ftcdn.net/jpg/00/83/95/55/240_F_83955554_GJkpFVDvAhZ0A4TYjjZYU2zq5fflL3dS.jpg',
+            'https://t3.ftcdn.net/jpg/02/95/26/46/240_F_295264675_clwKZxogAhxLS9sD163Tgkz1WMHsq1RJ.jpg',
+            'https://t3.ftcdn.net/jpg/06/78/38/28/240_F_678382841_cYPQ1NoEL0OtOOA99fu9T6IawxXQ18Ly.jpg',
+            'https://t3.ftcdn.net/jpg/00/56/22/76/240_F_56227640_YgWq5IxQX62AYD5CdA1KqPZfdu10oUpD.jpg'
+        ];
+        
+        var i = 0;
+
+        function abc() {
+            var img = document.getElementById("d1");
+            i = (i+ 1) % images.length;
+            img.src = images[i];
+        }
+    </script>
+</body>
+</html>

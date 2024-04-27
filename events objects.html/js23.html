@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                height: 20%;
+                width: 400px;
+                display: inline-block;
+            }
+            #d2{
+                height: 20%;
+                width: 400px;
+                display: inline-block;
+            }
+            #d3{
+                height: 20%;
+                width: 400px;
+                display: inline-block;
+            }
+            #d5{
+                height: 400px;
+                width: 800px;
+                border: 2px solid;  
+            }
+          
+      </style>
+    </head>
+    <body>
+        <div id="d4">
+         <div id="d1"><img onclick="abc()"src="https://bsmedia.business-standard.com/_media/bs/img/article/2020-07/29/full/1596046429-1041.jpg?im=FeatureCrop,size=(826,465)" width="100%"><span></span></div>
+        <div id="d2"><img onclick="abcd()"src="https://img.etimg.com/thumb/width-1600,height-900,imgsize-31644,resizemode-75,msid-108285668/industry/transportation/airlines-/-aviation/air-india-kicks-out-troublesome-head-of-a-top-financial-company-as-she-was-rude.jpg" width="100%"><span></span></div>
+        <div id="d3"><img onclick="def()"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14zHKsFE2tH8pw_UgLovAd2v_w565e3KQbL3YC5oMNQ&s"width="100%"><span></span></div>
+    </div>
+    <div><img id="d5"></div>
+       
+        <script>
+            function abc(){
+               var i=document.getElementById("d5")
+               i.src="https://bsmedia.business-standard.com/_media/bs/img/article/2020-07/29/full/1596046429-1041.jpg?im=FeatureCrop,size=(826,465)"
+            }
+            function abcd(){
+               var x=document.getElementById("d5")
+               x.src="https://img.etimg.com/thumb/width-1600,height-900,imgsize-31644,resizemode-75,msid-108285668/industry/transportation/airlines-/-aviation/air-india-kicks-out-troublesome-head-of-a-top-financial-company-as-she-was-rude.jpg"
+            }
+            function def(){
+               var z=document.getElementById("d5")
+               z.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14zHKsFE2tH8pw_UgLovAd2v_w565e3KQbL3YC5oMNQ&s"
+            }
+
+        </script>
+    </body>
+</html>

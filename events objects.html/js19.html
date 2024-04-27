@@ -1,0 +1,40 @@
+
+<html>
+    <head>
+       
+        <style>
+            #dd{
+                text-align: center;
+            }
+            #db{
+                text-align: center;  
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="dd" style="color: red;">Like & Dislike Button</h1>
+        <div id="db">
+        <button id ="db"onclick="abc()">Like</button><span id="d1"></span><br><br>
+        <button onclick="def()" >Dislike</button><span id ="d2"></span>
+        </div>
+        <script>
+            var x=0;
+            var y=0;
+           var p= document.querySelector("#d1")
+            function abc(){
+                p .innerHTML=x
+                x++
+                p.innerHTML=x
+                
+            }
+            var q=document.querySelector("#d2")
+
+            function def(){
+                q .innerHTML=y
+                y++
+                q.innerHTML=y
+            }
+            
+        </script>
+    </body>
+</html>

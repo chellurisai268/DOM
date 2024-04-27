@@ -1,0 +1,76 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="d2">
+        </ul>
+        <script>
+            var ar = [
+                                {
+                                name:'jaya',
+                                gender:'female',
+                                place:'gachibowli',
+                                },
+                                {
+                                name:'dasu',
+                                gender:'male',
+                                place:'kphb'
+                                },
+                                {
+                                name:'swati',
+                                gender:'female',
+                                place:'pune'
+                                },
+                                {
+                                name:'pallavi',
+                                gender:'female',
+                                place:'assam'
+                                },
+                                {
+                                name:'kiran',
+                                gender:'male',
+                                place:'kondapur'
+                                },
+                                {
+                                name:'thirumala',
+                                gender:'male',
+                                place:'madhapur'
+                                },
+                                {
+                                name:'priya',
+                                gender:'female',
+                                place:'hitech'
+                                },
+                            ]
+                            var x=document.getElementById("d2")
+                            ar.forEach(function(s){
+                             var y=document.createElement("li")
+                             y.innerHTML=s.name;
+                             x.appendChild(y)
+
+                             var z=document.createElement("ul")
+                             var d=document.createElement("li")  
+                                d.innerHTML=s.gender;
+                                if(s.gender=="male")
+                                {
+                                    y.style.backgroundColor="pink"
+                                }
+                                else{
+                                    y.style.backgroundColor="skyblue"
+                                }
+                                z.appendChild(d)
+                                y.appendChild(z)
+                             var c=document.createElement("li")
+                             c.innerHTML=s.place;
+                             z.appendChild(c)
+                             
+                            })
+                            
+                            
+                           
+                        
+                        
+                           
+                
+        </script>
+    </body>
+</html>

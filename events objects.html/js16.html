@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            #d3{
+                display: inline-block;
+            }
+            #dd{
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div  id="d3"><button onclick="abc()">TOGGLE</button></div>
+        <div id="dd">:</div>
+         
+        <script>
+            var ar=['True','False']
+            var i=0;
+            function abc(){
+                document.getElementById("d3").appendChild(dd).innerHTML=ar[i]
+                i=(i+1)%ar.length
+            }
+
+        </script>
+    </body>
+</html>

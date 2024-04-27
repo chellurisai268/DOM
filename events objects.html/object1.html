@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <input onkeyup="abc(event)" text="" id="d1">
+        <h1 id="d3"></h1>
+        
+        <script>
+            function abc(e){
+                document.getElementById("d3").innerHTML=e.target.value
+               console.log(e.target.value)
+               var x=document.getElementById("d3")
+               x.style.color="red"
+               
+            }
+        </script>
+    </body>
+</html>

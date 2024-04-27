@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="" id="d6">
+        <button onclick="show()">show me</button>
+        <ul id="d1"></ul>
+       
+        <script>
+          var ar=['raju','sai','anil','mani']
+          function subbu(){
+            document.getElementById("d1").innerHTML=''
+          ar.forEach(function(b,i){
+            var y=document.createElement("li")
+            var btn=document.createElement("button")
+            btn.innerHTML="del"
+            y.innerHTML=b;
+            document.getElementById("d1").appendChild(y)
+            y.appendChild(btn)
+            btn.onclick=function show(){
+             alert("hi")
+
+            }
+          })}
+          subbu()
+          function show(){
+            var x=document.getElementById("d6").value
+            ar.push(x)
+            subbu();
+            console.log(ar)
+          }
+        </script>
+    </body>
+</html>

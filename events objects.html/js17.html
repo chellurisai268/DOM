@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <style>
+          
+        </style>
+    </head>
+    <body>
+        <div  ><button id="d3"  onclick="abc()">on</button></div>
+        
+        
+         
+        <script>
+            var ar=['On','Off']
+            var i=0;
+            function abc(){
+                document.getElementById("d3").innerHTML=ar[i]
+                i=(i+1)%ar.length
+            }
+
+        </script>
+    </body>
+</html>

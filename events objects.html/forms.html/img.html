@@ -1,0 +1,37 @@
+ <body>
+    <div>
+        <h1 id=""></h1>
+     <div>
+    <label>Enter the image URL :</label>
+    <input type="text" id="d1">
+    <button onclick="abc()">ADD IMAGE</button>
+    <div style="width: 100%; margin-top: 30px;" id="d2"></div>
+    </div>
+    </div>
+        <script>
+            var ar=[]
+            function bbb(){
+                document.querySelector("#d2").innerHTML=""
+                ar.forEach(function(a){
+                    var c=document.createElement("img")
+                    c.style.width="20%"
+                    c.src=a
+                    c.style.asceptRatio="3/2"
+                    console.dir(c)
+                    document.querySelector("#d2").appendChild(c)
+                    
+                    var x=document.querySelector("#d1")
+                    x.src=a
+
+                })
+            }
+            function abc(){
+               var y= document.querySelector("#d1")
+                  var p=y.value 
+                  ar.push(p)
+                  bbb()
+                  console.log(ar)
+                  y.value=""
+            }
+    </script>
+</body>

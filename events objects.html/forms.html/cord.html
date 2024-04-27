@@ -1,0 +1,81 @@
+<html>
+  <head></head>
+<body style="background-color: antiquewhite;">
+    <div>
+    Name : <input type="text" id="d1"><br> <br>
+    Number:<input type="number" id="d2"><br><br>
+    Email: <input type="email" id="d3"><br><br>
+    ImageURL:<input type="text" id="d4"><br><br>
+    <button onclick="btn()">Add Details</button>
+  </div>
+  <div id="d6"></div>
+    <script>
+      var details=[]
+      function btn(){
+         var object={
+          "Name":document.querySelector("#d1").value,
+          "Number":document.querySelector("#d2").value,
+          "Email":document.querySelector("#d3").value,
+          "Image":document.querySelector("#d4").value,
+         }
+         details.push(object) 
+         generate ()
+      }
+  
+        function generate(){
+          document.querySelector("#d6").innerHTML=""
+          details.forEach(function(s,i){
+            var nd=document.createElement("div") 
+            nd.style.width="350px"
+            nd.style.height="250px"
+            nd.style.border="1px solid red"
+            nd.style.marginTop="20px"
+            nd.style.padding=" 0px 20px 20px"
+            nd.style.backgroundColor="yellow"
+  
+             var mark=document.createElement("button") 
+             mark.innerHTML="x"
+             mark.style.color="red"
+             mark.style.fontSize="30px"
+             mark.style.textAlign="end"
+             mark.style.margin=" 10px 0px 0px 330px"
+            //  mark.onclick=function abc(){
+            //     confirm(
+            //         "do you want to remove this card"
+            //          if (true) {
+            //           details.splice(i,1)
+                      
+            //          }
+            //          else{
+                      
+            //          }
+            //     )
+            //  }
+             nd.appendChild(mark)
+              
+              var im=document.createElement("img")
+              im.src=s.Image
+              im.style.width="20%"
+              im.style.borderRadius="50%"
+              nd.appendChild(im)
+              var np=document.createElement("p")
+              np.innerHTML="Name:"+s.Name
+              nd.appendChild(np)
+  
+              var num=document.createElement("p")
+              num.innerHTML="Number:"+s.Number
+              nd.appendChild(num)
+  
+              var em=document.createElement("p")
+              em.innerHTML="Email:"+s.Email
+              nd.appendChild(em)
+  
+              document.querySelector("#d6").appendChild(nd)
+              
+          })
+        }
+         
+  
+    </script>
+  </body>
+  </html>

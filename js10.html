@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="dd"></ul>
+        <script>
+            ar=['naresh','king','anileappa']
+             function abc(){
+                 document.getElementById("dd").innerHTML=''
+
+                ar.forEach(function(s,i){
+                    var d=document.createElement("li")
+                    d.innerHTML=s;
+                    document.getElementById("dd").appendChild(d)
+                  
+                     var a=document.createElement("button")
+                    a.innerHTML="del";
+                     d.appendChild(a)
+                     a.onclick=function ad(){
+                      ar.splice(i,1)
+                      abc()
+
+                     }
+                   
+                   
+                })
+            }
+             abc()
+        </script>
+    </body>
+</html>

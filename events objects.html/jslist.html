@@ -1,0 +1,49 @@
+<html>
+    <head></head>
+    <body>
+    
+        <ol id="d2">
+          
+        </ol>
+        <script>
+              var students = [		
+                                    {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                            ]
+                            var x=document.getElementById("d2")
+                            students.forEach(function(s){
+                                var y=document.createElement("li")
+                                y.innerHTML=s.firstname;
+                                x.appendChild(y)
+
+                                var z=document.createElement("ol")
+
+                                s.subjects.forEach(function(a){
+                                    var a1=document.createElement("li") 
+                                    a1.innerHTML=a
+                                    z.appendChild(a1)
+                                })
+                                y.appendChild(z)
+                                var s1=document.createElement("ol")
+                                var a2 =document.createElement("li")
+                                a2.innerHTML=s.age
+                                s1.appendChild(a2)
+                                z.appendChild(s1)
+                            })
+
+        </script>
+    </body>
+</html>

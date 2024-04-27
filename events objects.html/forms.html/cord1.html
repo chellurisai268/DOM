@@ -1,0 +1,74 @@
+<html>
+    <head></head>
+    <body>
+        Name:<input type="text" id="d1"><br>
+        Number:<input type="number" id="d2"><br>
+        Email:<input type="email" id="d3"><br>
+        Enter image URL:<input type="text" id="d4"><br>
+        <button onclick="btn()">Add Contact</button>
+        <div id="d5"></div>
+
+
+        <script>
+            var details=[]
+            function btn(){
+                var object={
+                "Name":document.querySelector("#d1").value,
+                "Number":document.querySelector("#d2").value,
+                "Email":document.querySelector("#d3").value,
+                "Enter img URL":document.querySelector("#d4").value,
+
+                }
+                details.push(object)
+                generate()
+            } 
+            function generate(){
+                document.querySelector("#d5").innerHTML=""
+                details.forEach(function(s,i){
+                    var bn=document.createElement("div")
+                    bn.style.width="360px"
+                    bn.style.height="260px"
+                    bn.style.border="2px solid"
+                    bn.style.marginTop="20PX"
+                    bn.style.padding="0px 20px 20px"
+                    bn.style.backgroundColor="yellow"
+
+                    var mark=document.createElement("button")
+                    mark.innerHTML="X"
+                    mark.style.color="red"
+                    mark.style.fontSize="30px"
+                    mark.style.textAlign="end"
+                    mark.style.margin="10px 0px 0px 330px"
+
+                    bn.appendChild(mark)
+
+                    var im=document.createElement("img")
+                    im.src=s.Image
+                    im.style.width="30%"
+                    im.style.borderRadius="50%"
+                    bn.appendChild(im)
+
+
+                    var nam=document.createElement("p")
+                    nam.innerHTML="Name:"+s.Name
+                    bn.appendChild(nam)
+
+                    var num=document.createElement("p")
+                    num.innerHTML="Number:"+s.Number
+                    bn.appendChild(num)
+                    var emi=document.createElement("p")
+                    emi.innerHTML="Email:"+s.Email
+                    bn.appendChild(emi)
+
+                    document.querySelector("#d5").appendChild(bn)
+
+                    
+                
+
+
+                })
+            }
+
+        </script>
+    </body>
+</html>

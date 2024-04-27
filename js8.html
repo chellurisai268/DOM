@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="d3">
+        <button onclick="add()">add</button>
+        <ul id="dd"></ul>
+        <script>
+            var ar=['denesh','king','keerthi']
+            function din(){
+                ar.forEach(function(k){
+                    var x=document.createElement("li")
+                    x.innerHTML=k;
+                    document.getElementById("dd").appendChild(x)
+                })
+            }
+            din()
+            function abc(){
+                var p=document.getElementById("d3").value
+                ar.push(p)
+                din()
+                console.log(ar)
+            }
+            
+
+        </script>
+    </body>
+</html>

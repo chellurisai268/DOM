@@ -1,0 +1,83 @@
+<html>
+    <head></head>
+    <body style="background-color: black">
+        <div style="display: flex; color:green;">
+        <h1 id="d1">00:</h1>
+        <h1 id="d2">00:</h1>
+        <h1 id="d3">00</h1>
+        </div>
+        <div>
+        <button style="color: aqua;" onclick="start()" id="start">start</button>
+        <button style="color: aqua;" onclick="stop()"id="stop">stop</button>
+        <button style="color: aqua;" onclick="zab()">clear</button>
+       </div>
+
+        <script>
+            var i=1;
+            var t1;
+            var j=1;
+            var t2;
+            var t3;
+            var k=1;
+
+            function zab(){
+                k=0
+                i=0
+                j=0
+            }
+            
+            function start(){
+                document.getElementById("start").disabled=true
+                document.getElementById("stop").disabled=false
+ 
+                t1=setInterval(function(){
+                document.getElementById("d1").innerHTML=i+"s:";
+                i=i+1;
+                if(i===60){
+                    i=0;
+                   
+                }
+            },1000)
+        
+
+            t2=setInterval(function(){
+                    document.getElementById("d2").innerHTML=j+"m:";
+                    j=j+1;
+                    if(j===60){
+                        j=0;
+                
+                }
+                },60000)
+            
+
+                 
+                t3=setInterval(function(){
+                    document.getElementById("d3").innerHTML=k+"h";
+                    k=k+1;
+                    if(k===60){
+                        k=0;
+                }             
+                },3600000)
+            }
+         function stop(){
+            document.getElementById("start").disabled=false
+            document.getElementById("stop").disabled=true
+
+            clearInterval(t1)
+            clearInterval(t2)
+            clearInterval(t3)
+         }
+         function zab(){
+            i=0;
+            j=0;
+            k=0;
+            
+         }
+        
+
+               
+              
+
+        </script>
+    </body>
+</html>

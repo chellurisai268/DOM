@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="d1"></h1>
+        
+        <script>
+            var i=1;
+            var t1;
+            t1=setInterval(function(){
+                document.getElementById("d1").innerHTML=i;
+                if(i===0){
+                    clearTimeout(t1)
+                }
+                   
+                    console.log(i)
+                    i=i+1;
+                
+               
+               
+                
+                
+            },1000)
+           
+        </script>
+    </body>
+</html>

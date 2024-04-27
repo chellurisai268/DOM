@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic List</title>
+</head>
+<body>
+    <input type="text" id="d1">
+    <button id="d2" onclick="abc()">submit</button>
+    <ul id="dd">
+        
+    </ul>
+    <script>
+        // var ar = [];
+
+        function abc() {
+            var s = document.getElementById("d1").value; // Fetch the value of input field
+            var x = document.createElement("li");
+            x.innerHTML = s;
+            document.getElementById("dd").appendChild(x); // Append new list item to the ul element
+            //  ar.push(s); // Add the value to the array
+            // console.log(ar);// Log the array
+            console.log(x)
+        }
+
+    </script>
+</body>
+</html>

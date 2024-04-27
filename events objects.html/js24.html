@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        #d1 {
+            display: inline-block; 
+        }
+        #d2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="d2">
+        <i onclick="abc('d1')" class="bi bi-star" id="d1"></i>
+        <i onclick="abc('d3')" class="bi bi-star" id="d3"></i>
+        <i onclick="abc('d4')" class="bi bi-star" id="d4"></i>
+        <i onclick="abc('d5')" class="bi bi-star" id="d5"></i>
+        <i onclick="abc('d6')" class="bi bi-star" id="d6"></i>
+    </div>
+    
+    <div align="center">
+        <h4> Rating</h4>
+    </div>
+
+    <script>
+        var ar = ['black', 'white'];
+        var i = 0;
+
+        function abc(id) {
+            var element = document.getElementById(id);
+            element.style.backgroundColor = ar[i];
+            i = (i + 1) % ar.length;
+        }
+    </script>
+</body>
+</html>
